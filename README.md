@@ -30,18 +30,18 @@ I am also a professor at the Faculdade da Polícia Militar, where I lecture in M
 
 ### Web Development
 
-- **Project 1:** Description of the project and technologies used.
-- **Project 2:** Description of the project and technologies used.
+- **Project 1:** [foodExplorer](https://stately-cajeta-ac26ef.netlify.app/)
+- **Project 2:** [Projetos](https://github.com/jakunzler/rocketseat-explorer)
 
 ### Signal Processing and Machine Learning
 
-- **Project 3:** Description of the project and technologies used.
-- **Project 4:** Description of the project and technologies used.
+- **Project 3:** [Mestrado](http://repositorio.bc.ufg.br/tede/handle/tede/4893)
+- **Project 4:** [Doutorado](http://repositorio.bc.ufg.br/tede/handle/tede/12594)
 
 ### DIY Projects
 
-- **Project 5:** Description of the project and technologies used.
-- **Project 6:** Description of the project and technologies used.
+- **Project 5:** [Bancada Didática IoT](https://website4265751.nicepage.io/)
+- **Project 6:** [Digital Business Card](https://github.com/jakunzler/DoutorJonas)
 
 ## Professional Experience
 
@@ -65,8 +65,8 @@ I am also a professor at the Faculdade da Polícia Militar, where I lecture in M
 
 Feel free to reach out to me via:
 
-- Email: [k_jonasaugusto@ufg.br]
-- LinkedIn: [https://www.linkedin.com/in/jonas-augusto-kunzler-20a63547/]
-- GitHub: [https://github.com/jakunzler]
+- Email: <k_jonasaugusto@ufg.br>
+- [LinkedIn](https://www.linkedin.com/in/jonas-augusto-kunzler-20a63547/)
+- [GitHub](https://github.com/jakunzler)
 
 Thank you for visiting my portfolio!
