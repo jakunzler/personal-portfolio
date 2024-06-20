@@ -127,6 +127,7 @@
             </div>
 
           </li>
+
           <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
             data-name="bmc-button" data-slug="jakunzler" data-color="#FFDD00" data-emoji="" data-font="Cookie"
             data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
@@ -245,6 +246,7 @@
             Shortly after my birth, my family moved to Goiânia, Goiás, where I grew up and spent most of my life.
             Despite moving away from the South of Brazil, I still enjoy drinking my mate tea.
           </p>
+
           <p>
             Human relationships are the most important aspect of my life; I love meeting new people and making new
             friends. I believe that Jesus Christ is the Son of God and that He is deeply committed to healing
@@ -2022,8 +2024,10 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.795289275084!2d-49.26479498523952!3d-16.68689148851995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef365024b6ffb%3A0xa1d329342aeb0c00!2sGoi%C3%A2nia%2C%20State%20of%20Goi%C3%A1s%2C%20Brazil!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244581.71563034708!2d-49.3048327!3d-16.6974227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef6bd58d80867%3A0xef692bad20d2678e!2zR29pw6JuaWEsIEdP!5e0!3m2!1spt-BR!2sbr!4v1718886014533!5m2!1spt-BR!2sbr"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
 
           </figure>
         </section>
@@ -2032,12 +2036,33 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form id="contact-form" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <!-- <div>
+                <label for="to_name" class="about-text">Send your message to</label>
+                <input type="text" name="to_name" class="greetings-btn" value="Jonas Augusto Kunzler" disabled
+                  data-form-input style="width: 100%; margin-top: 15px">
+              </div> -->
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <div>
+                <label for="from_name" class="about-text">Please, insert your name</label>
+                <input type="text" name="from_name" class="form-input" placeholder="Full name" required data-form-input
+                  style="margin-top: 15px">
+              </div>
+
+              <!-- <div>
+                <label for="subject" class="about-text">Thank you</label>
+                <input type="button" name="subject" class="greetings-btn" value="🎉🎉👏👏" disabled data-form-input
+                  style="width: 100%; margin-top: 15px">
+              </div> -->
+
+              <div>
+                <label for="reply_to" class="about-text">Please, insert your email</label>
+                <input type="email" name="reply_to" class="form-input" placeholder="Email address" required
+                  data-form-input style="margin-top: 15px">
+              </div>
+
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
@@ -2078,7 +2103,48 @@
   -->
   <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
     data-id="jakunzler" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF"
-    data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+    data-position="Right" data-x_margin="18" data-y_margin="65">
+    </script>
+
+  <!--
+    - EmailJS settings
+  -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("bWDfF68dtKF6IaOyX");
+    })();
+  </script>
+
+  <script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // IDs do EmailJS
+      const serviceID = 'service_ljxturl';  // Substitua com seu Service ID
+      const templateID = 'template_9osriui'; // Substitua com seu Template ID
+
+      // Mostrar mensagem de envio
+      const formBtn = document.querySelector('[data-form-btn]');
+      formBtn.disabled = true;
+      formBtn.innerHTML = 'Sending...';
+
+      // Enviar o formulário
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          formBtn.innerHTML = 'Send Message';
+          formBtn.disabled = false;
+          alert('Message Sent!');
+
+          // Limpar os campos do formulário
+          document.getElementById('contact-form').reset();
+        }, (err) => {
+          formBtn.innerHTML = 'Send Message';
+          formBtn.disabled = false;
+          alert(JSON.stringify(err));
+        });
+    });
+  </script>
 
 </body>
 
